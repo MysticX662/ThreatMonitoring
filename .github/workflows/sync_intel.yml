@@ -1,0 +1,51 @@
+name: Sync Threat Intelligence
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch: # allow manual trigger from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Use a PAT if you have branch-protection rules that block the
+          # default GITHUB_TOKEN from pushing; otherwise GITHUB_TOKEN is fine.
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run aggregator
+        run: python src/aggregator.py
+
+      - name: Commit updated JSON feeds
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add api/v1/latest.json \
+                  api/v1/ips.json \
+                  api/v1/vulnerabilities.json
+
+          # Only commit when there are actual changes
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+            git commit -m "Sync Intel: ${TIMESTAMP}"
+            git push origin main
+          fi
