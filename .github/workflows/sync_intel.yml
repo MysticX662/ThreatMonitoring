@@ -39,7 +39,8 @@ jobs:
 
           git add api/v1/latest.json \
                   api/v1/ips.json \
-                  api/v1/vulnerabilities.json
+                  api/v1/vulnerabilities.json \
+                  api/v1/summary.json
 
           # Only commit when there are actual changes
           if git diff --cached --quiet; then

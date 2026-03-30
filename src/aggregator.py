@@ -8,6 +8,7 @@ import json
 import os
 import re
 import sys
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -23,6 +24,13 @@ load_dotenv()
 REPO_ROOT = Path(__file__).resolve().parents[1]
 API_DIR = REPO_ROOT / "api" / "v1"
 API_DIR.mkdir(parents=True, exist_ok=True)
+
+# GitHub Raw base — used in summary.json so consumers know the canonical URLs.
+# GitHub Raw serves Access-Control-Allow-Origin: * on all responses, so every
+# endpoint below is CORS-friendly and can be fetched directly from a browser.
+GITHUB_RAW_BASE = (
+    "https://raw.githubusercontent.com/MysticX662/ThreatMonitoring/main/api/v1"
+)
 
 # ---------------------------------------------------------------------------
 # Schema
@@ -249,6 +257,42 @@ def validate_record(record: dict) -> bool:
 
 
 # ---------------------------------------------------------------------------
+# Summary builder
+# ---------------------------------------------------------------------------
+
+def build_summary(merged: list[dict]) -> dict:
+    """
+    Return a summary object with counts by source, type, and severity.
+    Written to api/v1/summary.json so consumers can quickly assess feed
+    coverage without downloading the full IOC list.
+    """
+    by_source   = Counter(r["source"]   for r in merged)
+    by_type     = Counter(r["type"]     for r in merged)
+    by_severity = Counter(r["severity"] for r in merged)
+
+    return {
+        "schema_version": "1.0",
+        "generated_at":   datetime.now(timezone.utc).isoformat(),
+        "total_iocs":     len(merged),
+        # CORS note embedded so it travels with the data
+        "cors": {
+            "note":   "GitHub Raw serves Access-Control-Allow-Origin: * on all responses.",
+            "header": "Access-Control-Allow-Origin: *",
+        },
+        "endpoints": {
+            "latest":          f"{GITHUB_RAW_BASE}/latest.json",
+            "ips":             f"{GITHUB_RAW_BASE}/ips.json",
+            "vulnerabilities": f"{GITHUB_RAW_BASE}/vulnerabilities.json",
+            "summary":         f"{GITHUB_RAW_BASE}/summary.json",
+        },
+        # Sorted descending by count so the most active source/type is first
+        "by_source":   dict(sorted(by_source.items(),   key=lambda x: x[1], reverse=True)),
+        "by_type":     dict(sorted(by_type.items(),     key=lambda x: x[1], reverse=True)),
+        "by_severity": dict(sorted(by_severity.items(), key=lambda x: x[1], reverse=True)),
+    }
+
+
+# ---------------------------------------------------------------------------
 # Write helpers
 # ---------------------------------------------------------------------------
 
@@ -256,7 +300,9 @@ def write_json(path: Path, data: object) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as fh:
         json.dump(data, fh, indent=2, ensure_ascii=False)
-    print(f"[write] {path.relative_to(REPO_ROOT)}  ({len(data)} records)")
+    size = len(data) if isinstance(data, (list, dict)) else "?"
+    label = "records" if isinstance(data, list) else "keys"
+    print(f"[write] {path.relative_to(REPO_ROOT)}  ({size} {label})")
 
 
 # ---------------------------------------------------------------------------
@@ -292,6 +338,10 @@ def main() -> None:
     # api/v1/vulnerabilities.json — vulnerability (CVE) entries only
     vulns = [r for r in merged if r["type"] == "vulnerability"]
     write_json(API_DIR / "vulnerabilities.json", vulns)
+
+    # api/v1/summary.json — aggregated counts + endpoint index
+    summary = build_summary(merged)
+    write_json(API_DIR / "summary.json", summary)
 
     print("\n[aggregator] Done.")
 
