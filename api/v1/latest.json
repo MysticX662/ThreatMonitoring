@@ -1,5 +1,13 @@
 [
   {
+    "ioc": "CVE-2026-5281",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Google Dawn: Google Dawn contains an use-after-free vulnerability that could allow a remote attacker who had compromised the renderer process to execute arbitrary code via a crafted HTML page. This vulnerability could affect multiple Chromium-based products including, but not limited to, Google Chrome, Microsoft Edge, and Opera. | Action: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+    "timestamp": "2026-04-01"
+  },
+  {
     "ioc": "CVE-2026-3055",
     "type": "vulnerability",
     "severity": "critical",
@@ -3985,14 +3993,6 @@
   },
   {
     "ioc": "CVE-2023-29300",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Adobe ColdFusion: Adobe ColdFusion contains a deserialization of untrusted data vulnerability that allows for code execution. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
-    "timestamp": "2024-01-08"
-  },
-  {
-    "ioc": "CVE-2023-38203",
     "type": "vulnerability",
     "severity": "critical",
     "source": "CISA KEV",
