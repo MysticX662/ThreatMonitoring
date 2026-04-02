@@ -20,7 +20,7 @@
     "type": "vulnerability",
     "severity": "critical",
     "source": "CISA KEV",
-    "description": "F5 BIG-IP: F5 BIG-IP APM contains an unspecified vulnerability that could allow a threat actor to achieve remote code execution. | Action: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+    "description": "F5 BIG-IP: F5 BIG-IP APM contains a stack-based buffer overflow vulnerability that could allow a threat actor to achieve remote code execution. | Action: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
     "timestamp": "2026-03-27"
   },
   {
