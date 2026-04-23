@@ -1,5 +1,13 @@
 [
   {
+    "ioc": "CVE-2026-39987",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Marimo Marimo: Marimo contains an pre-authorization remote code execution vulnerability, allowing an unauthenticated attacked to shell access and execute arbitrary system commands. | Action: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+    "timestamp": "2026-04-23"
+  },
+  {
     "ioc": "CVE-2026-33825",
     "type": "vulnerability",
     "severity": "critical",
@@ -3990,13 +3998,5 @@
     "source": "CISA KEV",
     "description": "Microsoft Exchange Server: Microsoft Exchange Server contains an unspecified vulnerability that allows for privilege escalation. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
     "timestamp": "2024-02-15"
-  },
-  {
-    "ioc": "CVE-2024-21412",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Microsoft Windows: Microsoft Windows Internet Shortcut Files contains an unspecified vulnerability that allows for a security feature bypass. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
-    "timestamp": "2024-02-13"
   }
 ]
