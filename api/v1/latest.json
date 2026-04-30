@@ -1,5 +1,13 @@
 [
   {
+    "ioc": "CVE-2026-41940",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "WebPros cPanel & WHM and WP2 (WordPress Squared): WebPros cPanel & WHM (WebHost Manager) and WP2 (WordPress Squared) contain an authentication bypass vulnerability in the login flow that allows unauthenticated remote attackers to gain unauthorized access to the control panel. | Action: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+    "timestamp": "2026-04-30"
+  },
+  {
     "ioc": "CVE-2024-1708",
     "type": "vulnerability",
     "severity": "critical",
@@ -3990,13 +3998,5 @@
     "source": "CISA KEV",
     "description": "Apple Multiple Products: Apple iOS, iPadOS, macOS, tvOS, and watchOS RTKit contain a memory corruption vulnerability that allows an attacker with arbitrary kernel read and write capability to bypass kernel memory protections. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
     "timestamp": "2024-03-06"
-  },
-  {
-    "ioc": "CVE-2023-21237",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Android Pixel: Android Pixel contains a vulnerability in the Framework component, where the UI may be misleading or insufficient, providing a means to hide a foreground service notification. This could enable a local attacker to disclose sensitive information. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
-    "timestamp": "2024-03-05"
   }
 ]
