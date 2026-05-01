@@ -1,5 +1,13 @@
 [
   {
+    "ioc": "CVE-2026-31431",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Linux Kernel: Linux Kernel contains an incorrect resource transfer between spheres vulnerability that could allow for privilege escalation. | Action: \"Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+    "timestamp": "2026-05-01"
+  },
+  {
     "ioc": "CVE-2026-41940",
     "type": "vulnerability",
     "severity": "critical",
@@ -3989,14 +3997,6 @@
     "severity": "critical",
     "source": "CISA KEV",
     "description": "Apple Multiple Products: Apple iOS, iPadOS, macOS, tvOS, watchOS, and visionOS kernel contain a memory corruption vulnerability that allows an attacker with arbitrary kernel read and write capability to bypass kernel memory protections. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
-    "timestamp": "2024-03-06"
-  },
-  {
-    "ioc": "CVE-2024-23296",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Apple Multiple Products: Apple iOS, iPadOS, macOS, tvOS, and watchOS RTKit contain a memory corruption vulnerability that allows an attacker with arbitrary kernel read and write capability to bypass kernel memory protections. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
     "timestamp": "2024-03-06"
   }
 ]
