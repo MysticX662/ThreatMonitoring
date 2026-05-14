@@ -1,5 +1,13 @@
 [
   {
+    "ioc": "CVE-2026-20182",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Cisco Catalyst SD-WAN: Cisco Catalyst SD-WAN Controller & Manager contain an authentication bypass vulnerability that allows an unauthenticated, remote attacker to bypass authentication and obtain administrative privileges on an affected system. | Action: Please adhere to CISA’s guidelines to assess exposure and mitigate risks associated with Cisco SD-WAN devices as outlined in CISA’s Emergency Directive 26-03 (URL listed below in Notes) and CISA’s Hunt & Hardening Guidance for Cisco SD-WAN Devices (URL listed below in Notes). Adhere to the applicable BOD 22-01 guidance for cloud services or discontinue use of the product if mitigations are not available.",
+    "timestamp": "2026-05-14"
+  },
+  {
     "ioc": "CVE-2026-42208",
     "type": "vulnerability",
     "severity": "critical",
@@ -3989,14 +3997,6 @@
     "severity": "critical",
     "source": "CISA KEV",
     "description": "Nice Linear eMerge E3-Series: Nice Linear eMerge E3-Series contains an OS command injection vulnerability that allows an attacker to conduct remote code execution. | Action: Contact the vendor for guidance on remediating firmware, per their advisory.",
-    "timestamp": "2024-03-25"
-  },
-  {
-    "ioc": "CVE-2021-44529",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Ivanti Endpoint Manager Cloud Service Appliance (EPM CSA): Ivanti Endpoint Manager Cloud Service Appliance (EPM CSA) contains a code injection vulnerability that allows an unauthenticated user to execute malicious code with limited permissions (nobody). | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
     "timestamp": "2024-03-25"
   }
 ]
