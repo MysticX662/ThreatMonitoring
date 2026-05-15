@@ -1,5 +1,13 @@
 [
   {
+    "ioc": "CVE-2026-42897",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Microsoft Microsoft: Microsoft Exchange Server contains a cross-site scripting vulnerability during web page generation in Outlook Web Access and when certain interaction conditions are met, arbitrary JavaScript can be executed in the browser context. | Action: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+    "timestamp": "2026-05-15"
+  },
+  {
     "ioc": "CVE-2026-20182",
     "type": "vulnerability",
     "severity": "critical",
@@ -3990,13 +3998,5 @@
     "source": "CISA KEV",
     "description": "Microsoft SharePoint Server: Microsoft SharePoint Server contains a code injection vulnerability that allows an authenticated attacker with Site Owner privileges to execute code remotely. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
     "timestamp": "2024-03-26"
-  },
-  {
-    "ioc": "CVE-2019-7256",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Nice Linear eMerge E3-Series: Nice Linear eMerge E3-Series contains an OS command injection vulnerability that allows an attacker to conduct remote code execution. | Action: Contact the vendor for guidance on remediating firmware, per their advisory.",
-    "timestamp": "2024-03-25"
   }
 ]
