@@ -1,5 +1,21 @@
 [
   {
+    "ioc": "CVE-2022-0492",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Linux Kernel: Linux Kernel contains an improper authentication vulnerability which could allow for privilege escalation via the cgroups v1 release_agent feature. | Action: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+    "timestamp": "2026-06-02"
+  },
+  {
+    "ioc": "CVE-2025-48595",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Android Framework: Android Framework contains an integer overflow vulnerability that allows for code execution that could allow for local privilege escalation. | Action: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+    "timestamp": "2026-06-02"
+  },
+  {
     "ioc": "CVE-2024-21182",
     "type": "vulnerability",
     "severity": "critical",
@@ -3982,21 +3998,5 @@
     "source": "CISA KEV",
     "description": "NextGen Healthcare Mirth Connect: NextGen Healthcare Mirth Connect contains a deserialization of untrusted data vulnerability that allows for unauthenticated remote code execution via a specially crafted request. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
     "timestamp": "2024-05-20"
-  },
-  {
-    "ioc": "CVE-2024-4761",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Google Chromium V8: Google Chromium V8 Engine contains an unspecified out-of-bounds memory write vulnerability via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.  | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
-    "timestamp": "2024-05-16"
-  },
-  {
-    "ioc": "CVE-2021-40655",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "D-Link DIR-605 Router: D-Link DIR-605 routers contain an information disclosure vulnerability that allows attackers to obtain a username and password by forging a post request to the /getcfg.php page.  | Action: This vulnerability affects legacy D-Link products. All associated hardware revisions have reached their end-of-life (EOL) or end-of-service (EOS) life cycle and should be retired and replaced per vendor instructions.",
-    "timestamp": "2024-05-16"
   }
 ]
