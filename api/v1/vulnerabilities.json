@@ -1,5 +1,13 @@
 [
   {
+    "ioc": "CVE-2026-45247",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Mirasvit Mirasvit Full Page Cache Warmer: Mirasvit Full Page Cache Warmer contains a deserialization of untrusted data vulnerability that could allow unauthenticated attackers to achieve remote code execution by supplying a crafted serialized PHP object in the CacheWarmer cookie. | Action: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+    "timestamp": "2026-06-03"
+  },
+  {
     "ioc": "CVE-2022-0492",
     "type": "vulnerability",
     "severity": "critical",
@@ -3989,14 +3997,6 @@
     "severity": "critical",
     "source": "CISA KEV",
     "description": "Google Chromium V8: Google Chromium V8 contains a type confusion vulnerability that allows a remote attacker to execute code via a crafted HTML page. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
-    "timestamp": "2024-05-20"
-  },
-  {
-    "ioc": "CVE-2023-43208",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "NextGen Healthcare Mirth Connect: NextGen Healthcare Mirth Connect contains a deserialization of untrusted data vulnerability that allows for unauthenticated remote code execution via a specially crafted request. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
     "timestamp": "2024-05-20"
   }
 ]
