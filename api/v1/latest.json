@@ -8,6 +8,14 @@
     "timestamp": "2026-06-08"
   },
   {
+    "ioc": "CVE-2026-50751",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Check Point Security Gateway: Check Point Security Gateway contains an improper authentication vulnerability in IKEv1 key exchange that could allow an unauthenticated remote attacker to bypass user authentication and establish a remote access VPN connection without a valid user password. | Action: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+    "timestamp": "2026-06-08"
+  },
+  {
     "ioc": "CVE-2026-28318",
     "type": "vulnerability",
     "severity": "critical",
@@ -3990,13 +3998,5 @@
     "source": "CISA KEV",
     "description": "Justice AV Solutions Viewer : Justice AV Solutions (JAVS) Viewer installer contains a malicious version of ffmpeg.exe, named fffmpeg.exe (SHA256: 421a4ad2615941b177b6ec4ab5e239c14e62af2ab07c6df1741e2a62223223c4). When run, this creates a backdoor connection to a malicious C2 server. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
     "timestamp": "2024-05-29"
-  },
-  {
-    "ioc": "CVE-2024-5274",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Google Chromium V8: Google Chromium V8 contains a type confusion vulnerability that allows a remote attacker to execute code via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
-    "timestamp": "2024-05-28"
   }
 ]
