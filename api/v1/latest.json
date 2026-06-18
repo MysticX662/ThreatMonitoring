@@ -1,5 +1,13 @@
 [
   {
+    "ioc": "CVE-2026-20253",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Splunk Enterprise: Splunk Enterprise contains a missing authentication for critical function vulnerability which could allow an unauthenticated user to create or truncate arbitrary files through a PostgreSQL sidecar service endpoint. | Action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+    "timestamp": "2026-06-18"
+  },
+  {
     "ioc": "CVE-2026-48907",
     "type": "vulnerability",
     "severity": "critical",
@@ -3990,13 +3998,5 @@
     "source": "CISA KEV",
     "description": "OSGeo JAI-EXT: OSGeo GeoServer JAI-EXT contains a code injection vulnerability that, when programs use jt-jiffle and allow Jiffle script to be provided via network request, could allow remote code execution. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
     "timestamp": "2024-06-26"
-  },
-  {
-    "ioc": "CVE-2024-4358",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Progress Telerik Report Server: Progress Telerik Report Server contains an authorization bypass by spoofing vulnerability that allows an attacker to obtain unauthorized access. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
-    "timestamp": "2024-06-13"
   }
 ]
