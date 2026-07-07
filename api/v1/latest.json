@@ -24,6 +24,14 @@
     "timestamp": "2026-07-07"
   },
   {
+    "ioc": "CVE-2026-48282",
+    "type": "vulnerability",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "description": "Adobe ColdFusion: Adobe ColdFusion contains a path traversal vulnerability that could lead to arbitrary code execution in the context of the current user. | Action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+    "timestamp": "2026-07-07"
+  },
+  {
     "ioc": "CVE-2026-45659",
     "type": "vulnerability",
     "severity": "critical",
@@ -3989,14 +3997,6 @@
     "severity": "critical",
     "source": "CISA KEV",
     "description": "Twilio Authy: Twilio Authy contains an information disclosure vulnerability in its API that allows an unauthenticated endpoint to accept a request containing a phone number and respond with information about whether the phone number was registered with Authy. | Action: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
-    "timestamp": "2024-07-23"
-  },
-  {
-    "ioc": "CVE-2012-4792",
-    "type": "vulnerability",
-    "severity": "critical",
-    "source": "CISA KEV",
-    "description": "Microsoft Internet Explorer: Microsoft Internet Explorer contains a use-after-free vulnerability that allows a remote attacker to execute arbitrary code via a crafted web site that triggers access to an object that (1) was not properly allocated or (2) is deleted, as demonstrated by a CDwnBindInfo object. | Action: The impacted product is end-of-life and should be disconnected if still in use.",
     "timestamp": "2024-07-23"
   }
 ]
